@@ -13,7 +13,7 @@ module.exports = {
         "white-100": "#f3f3f3",
         "primary-light": "#E9ECEF",
         "secondary-light": "#2f2f2f",
-        "tertiary-light": "#ADB5BD",
+        "tertiary-light": "#DEE2E6",
         "red": "#FF0000"
       },
       boxShadow: {

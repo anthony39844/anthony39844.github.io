@@ -5,15 +5,18 @@ import { github } from "../assets"
 import { projects } from "../constants"
 import { SectionWrapper } from '../hoc'
 import { fadeIn, textVariant } from '../utils/motion'
+import { useContext } from "react"
+import DarkModeContext from '../hoc/DarkModeContext';
 
 const ProjectCard = ({index, name, description, tags, image, source_code_link}) => {
+  const { darkMode } = useContext(DarkModeContext);
   return (
     <motion.div 
       variants={fadeIn("up", "spring", index * 0.5, 0.75)}
     >
       <Tilt
         options={{max:45, scale:1, speed:450}}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
+        className={`${darkMode ? 'bg-tertiary' : 'bg-tertiary-light'} p-5 rounded-2xl sm:w-[360px] w-full`}
       >
         <div className="relative w-full h-[230px]">
           <img  
@@ -34,12 +37,12 @@ const ProjectCard = ({index, name, description, tags, image, source_code_link}) 
         </div>
 
         <div className="mt-5">
-          <h3 className="text-white font-bold text-[24px]">{name}</h3>
+          <h3 className={`${darkMode ? 'text-white' : 'text-secondary-light'} font-bold text-[24px]`}>{name}</h3>
           <ul className="mt-5 list-disc ml-5 space-y-2">
           {description.map((desc, index) => (
             <li 
               key={`description-point-${index}`}
-              className="text-white-100 text-[14px] pl-1 tracking-wider"
+              className={`${darkMode ? 'text-white' : 'text-secondary-light'} text-[14px] pl-1 tracking-wider`}
             >
               {desc}
             </li>
@@ -61,12 +64,13 @@ const ProjectCard = ({index, name, description, tags, image, source_code_link}) 
 
 
 const Works = () => {
+  const { darkMode } = useContext(DarkModeContext);
   return (
     <>
     <motion.div
       variants={textVariant()}
     >
-      <h2 className={styles.sectionHeadText}>
+      <h2 className={`${darkMode ? 'text-white' : 'text-secondary-light'} font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]`}>
         Projects
       </h2>
     </motion.div>
@@ -74,7 +78,7 @@ const Works = () => {
     <div className="w-full flex">
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
+        className={`mt-3 ${darkMode ? 'text-secondary' : 'text-secondary-light'} text-[17px] max-w-3xl leading-[30px]`}
       >
         A few of my personal projects
       </motion.p>

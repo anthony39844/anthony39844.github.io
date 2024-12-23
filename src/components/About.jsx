@@ -1,20 +1,23 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { styles } from '../styles'
 import { fadeIn, textVariant } from '../utils/motion'
 import { SectionWrapper } from '../hoc'
+import { useContext} from 'react'
+import DarkModeContext from '../hoc/DarkModeContext';
 
 const About = () => {
+  const { darkMode } = useContext(DarkModeContext);
+
   return (
     <>
       <motion.div variants={textVariant()} className='mt-4'>
-        <h2 className={styles.sectionHeadText}>
+        <h2 className={`${darkMode ? 'text-white' : 'text-secondary-light'} font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]`}>
           Hi! I'm Anthony Zheng!
         </h2>
       </motion.div>
       <motion.p 
         variants={fadeIn("", "", 0.1, 1)}
-        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
+        className={`mt-4 ${darkMode ? 'text-secondary' : 'text-secondary-light'} text-[17px] max-w-3xl leading-[30px]`}
       >
         I'm a software engineer interested in all parts of applied AI projects. I'm currently based in NYC, working on infrastructure at Jane Street.
 

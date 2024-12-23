@@ -1,29 +1,36 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMoon } from '@fortawesome/free-solid-svg-icons';
 import {styles} from '../styles'
 import { navLinks } from '../constants'
-import {menu, close} from '../assets'
+import {menu, close, menu_black, close_black} from '../assets'
+import DarkModeContext from '../hoc/DarkModeContext';
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
+  const { darkMode, setDarkMode } = useContext(DarkModeContext);
+
+  const toggleDarkMode = () => {
+    setDarkMode((prevMode) => !prevMode);
+  };
   
   return (
-    <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}>
+    <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 ${darkMode ? 'bg-primary' : 'bg-primary-light'}`}>
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
         <Link to="/" className='flex items-center gap-2' 
           onClick={() => {
             setActive("");
             window.scrollTo(0, 0);
         }}>
-          <p className='text-white text-[18px] font-bold cursor-point'>Anthony Zheng</p>
+          <p className={`${darkMode ? 'text-white' : 'text-secondary-light'} text-[18px] font-bold cursor-point`}>Anthony Zheng</p>
         </Link>
         <ul className='list-none hidden sm:flex flex-row gap-10'>
           {navLinks.map((link) => (
             <li 
               key={link.id} 
-              className={`text-white 
-              hover:text-white text-[18px] font-medium cursor-pointer`}
+              className={`${darkMode ? 'text-white' : 'text-secondary-light'}
+              text-[18px] font-medium cursor-pointer`}
               onClick={() => {
                 if (link.link !== undefined) {
                   window.open(link.link, "_blank");
@@ -35,20 +42,25 @@ const Navbar = () => {
             </a>
             </li>
           ))}
+          {/* <li 
+            className={`${darkMode ? 'text-white' : 'text-secondary-light'}`}
+            onClick={toggleDarkMode(darkMode)}>
+            <FontAwesomeIcon icon={faMoon} size="lg" />
+          </li> */}
         </ul>
         <div className='sm:hidden flex flex-1 justify-end items-center'>
           <img 
-            src={toggle ? close : menu} 
+            src={toggle ? (darkMode ? close : close_black) : (darkMode ? menu : menu_black)} 
             alt='menu' 
             className='w-[28px] h-[28px] object-contain cursor-pointer'
             onClick={() => setToggle(!toggle)}
           />
-          <div className={`${!toggle ? 'hidden' : 'flex' } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}>
+          <div className={`${!toggle ? 'hidden' : 'flex' } p-6 ${darkMode ? 'black-gradient' : 'bg-gradient-to-l from-[#E9ECEF] to-white'} absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}>
             <ul className='list-none flex justify-end items-start flex-col gap-4'>
               {navLinks.map((link) => (
                 <li 
                   key={link.id} 
-                  className={`text-white 
+                  className={`${darkMode ? 'text-white' : 'text-secondary-light'}
                   font-poppins font-medium cursor-pointer text-[16px]`}
                   onClick={() => {
                     if (link.link !== undefined) {

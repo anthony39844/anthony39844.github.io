@@ -1,12 +1,14 @@
-import {useState, useRef} from 'react'
+import {useState, useRef, useContext} from 'react'
 import {motion} from 'framer-motion'
 import emailjs from '@emailjs/browser'
 import { styles } from '../styles'
 import { SectionWrapper } from '../hoc'
-import { EarthCanvas } from './canvas'
 import { slideIn } from '../utils/motion'
+import DarkModeContext from '../hoc/DarkModeContext';
 
 const Contact = () => {
+  const { darkMode } = useContext(DarkModeContext);
+
   const formRef = useRef()
   const [form, setForm] = useState({
     name: '',
@@ -24,9 +26,11 @@ const Contact = () => {
     <div className='xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden'>
       <motion.div
         variants={slideIn('left', 'tween', 0.2, 1)}
-        className='flex-1 bg-black-100 p-8 rounded-2xl'
+        className={`flex-1 ${darkMode ? 'bg-tertiary' : 'bg-tertiary-light'} p-8 rounded-2xl`}
       >
-        <h3 className={styles.sectionHeadText}>Contact</h3>
+        <h3 className={`${darkMode ? 'text-white' : 'text-secondary-light'} font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]`}>
+          Contact
+        </h3>
 
         <form
           ref={formRef}
@@ -34,7 +38,7 @@ const Contact = () => {
           className='mt-12 flex flex-col gap-8'
         >
           <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>
+            <span className={`${darkMode ? 'text-white' : 'text-secondary-light'} font-medium mb-4`}>
               Your Name
             </span>
             <input 
@@ -43,11 +47,12 @@ const Contact = () => {
               value={form.name}
               onChange={handleChange}
               placeholder='What is your name?'
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium'
+              className={`${darkMode ? 'bg-primary placeholder:text-secondary text-white' : 'bg-primary-light placeholder: text-secondary-light text-secondary-light'} 
+              py-4 px-6 rounded-lg outlined-none border-none font-medium`}
             />
           </label>
           <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>
+            <span className={`${darkMode ? 'text-white' : 'text-secondary-light'} font-medium mb-4`}>
               Your Email
             </span>
             <input 
@@ -56,11 +61,12 @@ const Contact = () => {
               value={form.email}
               onChange={handleChange}
               placeholder='What is your email?'
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium'
+              className={`${darkMode ? 'bg-primary placeholder:text-secondary text-white' : 'bg-primary-light placeholder: text-secondary-light text-secondary-light'} 
+              py-4 px-6 rounded-lg outlined-none border-none font-medium`}
             />
           </label>
           <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>
+            <span className={`${darkMode ? 'text-white' : 'text-secondary-light'} font-medium mb-4`}>
               Your Message
             </span>
             <textarea 
@@ -69,13 +75,14 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               placeholder='What do you want to say?'
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium'
+              className={`${darkMode ? 'bg-primary placeholder:text-secondary text-white' : 'bg-primary-light placeholder: text-secondary-light text-secondary-light'} 
+              py-4 px-6 rounded-lg outlined-none border-none font-medium`}
             />
           </label>
 
           <button 
             type='submit'
-            className='bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl'
+            className={`${darkMode ? 'bg-primary shadow-primary' : 'bg-secondary-light shadow-secondary-light'} py-3 px-8 outline-none w-fit text-white font-bold shadow-md rounded-xl`}
           >
             {loading ? "Sending..." : "Send"}
           </button>

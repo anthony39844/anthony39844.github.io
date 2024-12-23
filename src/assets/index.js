@@ -1,6 +1,8 @@
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
+import menu_black from "./menu_black.svg"
+import close_black from "./close_black.webp"
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -26,6 +28,8 @@ import swish from "./swish.png"
 
 export {
   expensetracker,
+  menu_black,
+  close_black,
   algorithm_visual,
   github,
   menu,

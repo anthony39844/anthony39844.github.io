@@ -45,7 +45,7 @@ import {
       title: "LinkedIn",
       link: "https://www.linkedin.com/in/anthony39844/", 
       icon: faLinkedin
-    }
+    },
   ];
   
   const technologies = [
