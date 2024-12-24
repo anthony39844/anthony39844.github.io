@@ -2,7 +2,7 @@ import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 import menu_black from "./menu_black.svg"
-import close_black from "./close_black.webp"
+import close_black from "./close_black.png"
 
 import profile from "./selfie.png"
 

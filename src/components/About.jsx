@@ -1,18 +1,18 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { fadeIn, textVariant } from '/src/utils/motion'
-import { SectionWrapper } from '/src/hoc'
+import { fadeIn, textVariant } from '../utils/motion'
+import { SectionWrapper } from '../hoc'
 import { useContext} from 'react'
-import DarkModeContext from '/src/hoc/DarkModeContext'
-import { profile } from "/src/assets"
+import DarkModeContext from '../hoc/DarkModeContext'
+import { profile } from "../assets"
 
 const About = () => {
   const { darkMode } = useContext(DarkModeContext);
 
   return (
     <>
-    <div className="flex justify-center">
-      <div>
+    <div className="flex">
+      <div className='w-3/4'>
         <motion.div variants={textVariant()} className='mt-4'>
           <h2 className={`${darkMode ? 'text-text' : 'text-text-light'} font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]`}>
             Hi! I'm Anthony Zheng!
@@ -36,7 +36,7 @@ const About = () => {
           :)
         </motion.p>
       </div>
-      <div className="ml-10 flex items-center">
+      <div className="ml-10 mt-10 flex items-center">
         <img className="w-64 h-64 rounded-full object-cover" src={profile}></img>
       </div>
     </div>

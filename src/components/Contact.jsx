@@ -12,10 +12,6 @@ const Contact = () => {
 
   return (
     <div className='xl:mt-12 xl:flex-row flex overflow-hidden items-center justify-center'>
-      <motion.div
-        variants={slideIn('left', 'tween', 0.2, 1)}
-        className={`p-8 rounded-2xl`}
-      >
         <div className='flex items-center justify-center'>
         <button
           className={`${darkMode ? 'text-text' : 'text-text-light'} px-4 py-2 rounded text-[25px]`}
@@ -37,7 +33,6 @@ const Contact = () => {
         <div className={`${darkMode ? 'text-text' : 'text-text-light'}`}>
           Made by Anthony Zheng
         </div>
-      </motion.div>
     </div>
   )
 }

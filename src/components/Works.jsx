@@ -10,7 +10,10 @@ const ProjectCard = ({index, name, description, tags, image, source_code_link}) 
   const { darkMode } = useContext(DarkModeContext);
   return (
     <motion.div 
-      variants={fadeIn("up", "spring", index * 0.2, 0.7)}
+      variants={fadeIn("up", "spring", index * 0.2, .7)}
+      initial="hidden" 
+      whileInView="show" 
+      viewport={{ once: true }}
       className={`${darkMode ? 'bg-secondary' : 'bg-secondary-light'} p-5 rounded-2xl sm:w-[360px] w-full`}
     >
       <div className="relative w-full h-[230px]">
@@ -65,6 +68,9 @@ const Works = () => {
     <>
     <motion.div
       variants={textVariant()}
+      initial="hidden" 
+      whileInView="show" 
+      viewport={{ once: true }}
     >
       <h2 className={`${darkMode ? 'text-text' : 'text-text-light'} font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]`}>
         Projects
@@ -74,6 +80,9 @@ const Works = () => {
     <div className="w-full flex">
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
+        initial="hidden" 
+        whileInView="show" 
+        viewport={{ once: true }}
         className={`mt-3 ${darkMode ? 'text-text' : 'text-text-light'} text-[17px] max-w-3xl leading-[30px]`}
       >
         A few of my personal projects
