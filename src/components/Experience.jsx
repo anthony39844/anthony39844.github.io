@@ -11,8 +11,8 @@ const ExperienceCard = ({experience}) => {
   const { darkMode } = useContext(DarkModeContext);
 
   return ( <VerticalTimelineElement
-    contentStyle={{background: darkMode ? '#1d1836' : '#DEE2E6', color: darkMode ? '#fff' : '#2f2f2f'}}
-    contentArrowStyle={{borderRight: `7px solid ${darkMode ? '#232631' : '#DEE2E6'}`}}
+    contentStyle={{background: darkMode ? '#495057' : '#DEE2E6', color: darkMode ? '#fff' : '#2f2f2f'}}
+    contentArrowStyle={{borderRight: `7px solid ${darkMode ? '#495057' : '#DEE2E6'}`}}
     date={experience.date}
     iconStyle={{background: experience.iconBg}}
     icon={
@@ -26,16 +26,16 @@ const ExperienceCard = ({experience}) => {
     }
   >
     <div>
-      <h3 className={`${darkMode ? 'text-white' : 'text-secondary-light'} text-[24px] font-bold`}>
+      <h3 className={`${darkMode ? 'text-text' : 'text-text-light'} text-[24px] font-bold`}>
         {experience.title}
       </h3>
-      <p className={`${darkMode ? 'text-secondary' : 'text-secondary-light'} text-[16px] font-semibold" style={{margin:0}}`}>{experience.company_name}</p>
+      <p className={`${darkMode ? 'text-text' : 'text-text-light'} text-[16px] font-semibold" style={{margin:0}}`}>{experience.company_name}</p>
     </div>
     <ul className="mt-5 list-disc ml-5 space-y-2">
       {experience.points.map((point, index) => (
         <li 
           key={`experience-point-${index}`}
-          className={`${darkMode ? 'text-white' : 'text-secondary-light'} text-[14px] pl-1 tracking-wider`}
+          className={`${darkMode ? 'text-text' : 'text-text-light'} text-[14px] pl-1 tracking-wider`}
         >
           {point}
         </li>
@@ -52,8 +52,8 @@ const Experience = () => {
     <motion.div
       variants={textVariant()}
     >
-      <h2 className={`${darkMode ? 'text-white' : 'text-secondary-light'} font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]`}>
-        Work Experience
+      <h2 className={`${darkMode ? 'text-text' : 'text-text-light'} font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]`}>
+        Work
       </h2>
     </motion.div>
 

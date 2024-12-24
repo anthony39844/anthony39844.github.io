@@ -111,9 +111,8 @@ import {
       iconBg: "#383E56",
       date: "June 2024 - August 2024",
       points: [
-        "Implemented a tree map component to Voyager using TypeScript.",
-        "Manipulated JSON data from Aspen Techs proprietary DBMS as well as from REST APIs to be able to be displayed on the tree map.",
-        "Completed SWR tickets with bugs related from the front to the back end."
+        "I implemented a tree map component into Voyager by using DevExtreme and manipulated JSON data from AspenTechs proprietary DBMS and REST APIs to be able to be displayed on the tree map.",
+        "I also helped complete SWR tickets with bugs related from the front to the back end."
       ],
     },
   ];

@@ -16,20 +16,20 @@ const Navbar = () => {
   };
   
   return (
-    <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 ${darkMode ? 'bg-primary' : 'bg-primary-light'}`}>
+    <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 ${darkMode ? 'bg-tertiary' : 'bg-tertiary-light'}`}>
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
         <Link to="/" className='flex items-center gap-2' 
           onClick={() => {
             setActive("");
             window.scrollTo(0, 0);
         }}>
-          <p className={`${darkMode ? 'text-white' : 'text-secondary-light'} text-[18px] font-bold cursor-point`}>Anthony Zheng</p>
+          <p className={`${darkMode ? 'text-text' : 'text-text-light'} text-[18px] font-bold cursor-point`}>Anthony Zheng</p>
         </Link>
         <ul className='list-none hidden sm:flex flex-row gap-10'>
           {navLinks.map((link) => (
             <li 
               key={link.id} 
-              className={`${darkMode ? 'text-white' : 'text-secondary-light'}
+              className={`${darkMode ? 'text-text' : 'text-text-light'}
               text-[18px] font-medium cursor-pointer`}
               onClick={() => {
                 if (link.link !== undefined) {
@@ -42,11 +42,11 @@ const Navbar = () => {
             </a>
             </li>
           ))}
-          {/* <li 
-            className={`${darkMode ? 'text-white' : 'text-secondary-light'}`}
-            onClick={toggleDarkMode(darkMode)}>
+          <li 
+            className={`${darkMode ? 'text-text' : 'text-text-light'}`}
+            onClick={() => toggleDarkMode(darkMode)}>
             <FontAwesomeIcon icon={faMoon} size="lg" />
-          </li> */}
+          </li>
         </ul>
         <div className='sm:hidden flex flex-1 justify-end items-center'>
           <img 
@@ -60,7 +60,7 @@ const Navbar = () => {
               {navLinks.map((link) => (
                 <li 
                   key={link.id} 
-                  className={`${darkMode ? 'text-white' : 'text-secondary-light'}
+                  className={`${darkMode ? 'text-text' : 'text-text-light'}
                   font-poppins font-medium cursor-pointer text-[16px]`}
                   onClick={() => {
                     if (link.link !== undefined) {
@@ -75,6 +75,11 @@ const Navbar = () => {
                 </a>
                 </li>
               ))}
+              <li 
+                className={`${darkMode ? 'text-text' : 'text-text-light'}`}
+                onClick={() => toggleDarkMode(darkMode)}>
+                <FontAwesomeIcon icon={faMoon} size="lg" />
+              </li>
             </ul>
           </div>
         </div>

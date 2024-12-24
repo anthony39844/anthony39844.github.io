@@ -4,6 +4,9 @@ import close from "./close.svg";
 import menu_black from "./menu_black.svg"
 import close_black from "./close_black.webp"
 
+import resume from "./Resume (1).pdf"
+import profile from "./selfie.png"
+
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
 import figma from "./tech/figma.png";
@@ -50,5 +53,7 @@ export {
   sudoku,
   aspentech,
   drone_sim,
-  swish
+  swish,
+  resume,
+  profile
 };

@@ -1,10 +1,10 @@
 import { BrowserRouter } from "react-router-dom"
 import {About, Contact, Experience, Navbar, Tech, Works } from './components';
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import DarkModeContext from './hoc/DarkModeContext';
 
 const App = () => {
-  const { darkMode, setDarkMode } = useContext(DarkModeContext);
+  const { darkMode } = useContext(DarkModeContext);
 
   return (
     <BrowserRouter>
