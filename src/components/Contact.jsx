@@ -3,16 +3,17 @@ import { SectionWrapper } from '/src/hoc'
 import DarkModeContext from '/src/hoc/DarkModeContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+
 
 const Contact = () => {
   const { darkMode } = useContext(DarkModeContext);
 
   return (
-    <div className='xl:mt-12 xl:flex-row flex overflow-hidden justify-center'>
+    <div className='xl:mt-12 flex flex-col justify-center items-center'>
       <div className='flex items-center'>
         <button
-          className={`${darkMode ? 'text-text' : 'text-text-light'} px-4 py-2 rounded flex items-center`}
+          className={`${darkMode ? 'text-text' : 'text-text-light'} px-2 py-2 rounded flex items-center`}
           onClick={() => {
             window.location.href = "mailto:ant39844@gmail.com";
           }}
@@ -28,11 +29,19 @@ const Contact = () => {
             window.open("https://github.com/anthony39844/anthony39844.github.io", "_blank")
           }}
         >
-          <FontAwesomeIcon className="mr-3 text-[25px]" icon={faGithub} />
-        <div className={`${darkMode ? 'text-text' : 'text-text-light'} hover:underline text-[16px]`}>
-          Made by Anthony Zheng
-        </div>
+          <FontAwesomeIcon className="text-[25px]" icon={faGithub} />
         </button>
+        <button
+          className={`${darkMode ? 'text-text' : 'text-text-light'} px-4 py-2 rounded flex items-center`}
+          onClick={() => {
+            window.open("https://www.linkedin.com/in/anthony39844/", "_blank")
+          }}
+        >
+          <FontAwesomeIcon className="text-[25px]" icon={faLinkedin} />
+        </button>
+      </div>
+      <div className='mt-5 flex'>
+        Made by Anthony Zheng | 2024 
       </div>
     </div>
   )
