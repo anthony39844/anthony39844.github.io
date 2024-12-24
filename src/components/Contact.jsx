@@ -1,7 +1,5 @@
 import {useState, useRef, useContext} from 'react'
-import {motion} from 'framer-motion'
 import { SectionWrapper } from '/src/hoc'
-import { slideIn } from '/src/utils/motion'
 import DarkModeContext from '/src/hoc/DarkModeContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
@@ -11,28 +9,31 @@ const Contact = () => {
   const { darkMode } = useContext(DarkModeContext);
 
   return (
-    <div className='xl:mt-12 xl:flex-row flex overflow-hidden items-center justify-center'>
-        <div className='flex items-center justify-center'>
+    <div className='xl:mt-12 xl:flex-row flex overflow-hidden justify-center'>
+      <div className='flex items-center'>
         <button
-          className={`${darkMode ? 'text-text' : 'text-text-light'} px-4 py-2 rounded text-[25px]`}
+          className={`${darkMode ? 'text-text' : 'text-text-light'} px-4 py-2 rounded flex items-center`}
           onClick={() => {
             window.location.href = "mailto:ant39844@gmail.com";
           }}
         >
-          <FontAwesomeIcon icon={faEnvelope} />
+          <FontAwesomeIcon className="mr-3 text-[25px]" icon={faEnvelope} />
+        <div className={`${darkMode ? 'text-text' : 'text-text-light'} hover:underline text-[16px]`}>
+          ant39844@gmail.com
+        </div>
         </button>
         <button
-          className={`${darkMode ? 'text-text' : 'text-text-light'} px-4 py-2 rounded text-[25px]`}
+          className={`${darkMode ? 'text-text' : 'text-text-light'} px-4 py-2 rounded flex items-center`}
           onClick={() => {
-            window.open("https://github.com/anthony39844/portfolio", "_blank")
+            window.open("https://github.com/anthony39844/anthony39844.github.io", "_blank")
           }}
         >
-          <FontAwesomeIcon icon={faGithub} />
-        </button>
-        </div>
-        <div className={`${darkMode ? 'text-text' : 'text-text-light'}`}>
+          <FontAwesomeIcon className="mr-3 text-[25px]" icon={faGithub} />
+        <div className={`${darkMode ? 'text-text' : 'text-text-light'} hover:underline text-[16px]`}>
           Made by Anthony Zheng
         </div>
+        </button>
+      </div>
     </div>
   )
 }
