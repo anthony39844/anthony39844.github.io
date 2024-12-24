@@ -4,7 +4,7 @@ import { fadeIn, textVariant } from '../utils/motion'
 import { SectionWrapper } from '../hoc'
 import { useContext} from 'react'
 import DarkModeContext from '../hoc/DarkModeContext'
-import { resume, profile } from "../assets"
+import { profile } from "../assets"
 
 const About = () => {
   const { darkMode } = useContext(DarkModeContext);
@@ -28,7 +28,7 @@ const About = () => {
           <button
             className="text-[17 px] px-1"
             onClick={() => {
-              window.open(resume, "_blank");
+              window.open("/Resume (1).pdf", "_blank");
             }}
           >
           <span className="font-bold underline">resume</span>
