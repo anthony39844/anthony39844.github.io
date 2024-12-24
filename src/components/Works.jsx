@@ -10,7 +10,7 @@ const ProjectCard = ({index, name, description, tags, image, source_code_link}) 
   const { darkMode } = useContext(DarkModeContext);
   return (
     <motion.div 
-      variants={fadeIn("up", "spring", index * 0.2, .7)}
+      variants={fadeIn("up", "spring", index * 0.2, .5)}
       initial="hidden" 
       whileInView="show" 
       viewport={{ once: true }}
