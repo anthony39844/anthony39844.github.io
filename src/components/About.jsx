@@ -1,10 +1,10 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { fadeIn, textVariant } from '../utils/motion'
-import { SectionWrapper } from '../hoc'
+import { fadeIn, textVariant } from '/src/utils/motion'
+import { SectionWrapper } from '/src/hoc'
 import { useContext} from 'react'
-import DarkModeContext from '../hoc/DarkModeContext'
-import { profile } from "../assets"
+import DarkModeContext from '/src/hoc/DarkModeContext'
+import { profile } from "/src/assets"
 
 const About = () => {
   const { darkMode } = useContext(DarkModeContext);

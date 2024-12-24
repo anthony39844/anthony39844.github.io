@@ -1,8 +1,8 @@
 import {useState, useRef, useContext} from 'react'
 import {motion} from 'framer-motion'
-import { SectionWrapper } from '../hoc'
-import { slideIn } from '../utils/motion'
-import DarkModeContext from '../hoc/DarkModeContext';
+import { SectionWrapper } from '/src/hoc'
+import { slideIn } from '/src/utils/motion'
+import DarkModeContext from '/src/hoc/DarkModeContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from "@fortawesome/free-brands-svg-icons";

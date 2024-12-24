@@ -2,10 +2,10 @@ import React, { useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon } from '@fortawesome/free-solid-svg-icons';
-import {styles} from '../styles'
-import { navLinks } from '../constants'
-import {menu, close, menu_black, close_black} from '../assets'
-import DarkModeContext from '../hoc/DarkModeContext';
+import {styles} from '/src/styles'
+import { navLinks } from '/src/constants'
+import {menu, close, menu_black, close_black} from '/src/assets'
+import DarkModeContext from '/src/hoc/DarkModeContext';
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);

@@ -1,10 +1,10 @@
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component"
 import { motion } from "framer-motion"
 import 'react-vertical-timeline-component/style.min.css'
-import { experiences } from "../constants"
-import { SectionWrapper } from "../hoc"
-import { textVariant } from "../utils/motion"
-import DarkModeContext from '../hoc/DarkModeContext';
+import { experiences } from "/src/constants"
+import { SectionWrapper } from "/src/hoc"
+import { textVariant } from "/src/utils/motion"
+import DarkModeContext from '/src/hoc/DarkModeContext';
 import { useContext} from 'react'
 
 const ExperienceCard = ({experience}) => {

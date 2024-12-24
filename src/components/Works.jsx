@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion'
-import { github } from "../assets"
-import { projects } from "../constants"
-import { SectionWrapper } from '../hoc'
-import { fadeIn, textVariant } from '../utils/motion'
+import { github } from "/src/assets"
+import { projects } from "/src/constants"
+import { SectionWrapper } from '/src/hoc'
+import { fadeIn, textVariant } from '/src/utils/motion'
 import { useContext } from "react"
-import DarkModeContext from '../hoc/DarkModeContext';
+import DarkModeContext from '/src/hoc/DarkModeContext';
 
 const ProjectCard = ({index, name, description, tags, image, source_code_link}) => {
   const { darkMode } = useContext(DarkModeContext);
