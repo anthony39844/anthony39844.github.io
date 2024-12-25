@@ -11,8 +11,8 @@ const About = () => {
 
   return (
     <>
-    <div className="flex">
-      <div className='w-3/4'>
+    <div className="flex flex-col md:flex-row">
+      <div className='md:w-3/4 w-full'>
         <motion.div variants={textVariant()} className='mt-4'>
           <h2 className={`${darkMode ? 'text-text' : 'text-text-light'} font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]`}>
             Hi! I'm Anthony Zheng!
@@ -36,8 +36,8 @@ const About = () => {
           :)
         </motion.p>
       </div>
-      <div className="ml-10 mt-10 flex items-center">
-        <img className="w-64 h-64 rounded-full object-cover" src={profile}></img>
+      <div className="mt-10 md:ml-10 flex justify-center items-center">
+        <img className="w-40 h-40 md:w-48 md:h-48 lg:w-64 lg:h-64 rounded-full object-cover border-[3px] border-black" src={profile}></img>
       </div>
     </div>
     </>

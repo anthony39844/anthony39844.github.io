@@ -13,7 +13,7 @@ const ProjectCard = ({index, name, description, tags, image, source_code_link}) 
       variants={fadeIn("up", "spring", index * 0.2, 1)}
       initial="hidden" 
       whileInView="show" 
-      viewport={{ once: true }}
+      viewport={{ once: true, amount: "some" }}
       className={`${darkMode ? 'bg-secondary' : 'bg-secondary-light'} p-5 rounded-2xl sm:w-[360px] w-full`}
     >
       <div className="relative w-full h-[230px]">
@@ -70,7 +70,7 @@ const Works = () => {
       variants={textVariant()}
       initial="hidden" 
       whileInView="show" 
-      viewport={{ once: true }}
+      viewport={{ once: true, amount: "some"}}
     >
       <h2 className={`${darkMode ? 'text-text' : 'text-text-light'} font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]`}>
         Projects
@@ -82,7 +82,7 @@ const Works = () => {
         variants={fadeIn("", "", 0.1, 1)}
         initial="hidden" 
         whileInView="show" 
-        viewport={{ once: true }}
+        viewport={{ once: true, amount: "some"}}
         className={`mt-3 ${darkMode ? 'text-text' : 'text-text-light'} text-[17px] max-w-3xl leading-[30px]`}
       >
         A few of my personal projects
