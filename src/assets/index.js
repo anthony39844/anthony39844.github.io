@@ -4,8 +4,6 @@ import close from "./close.svg";
 import menu_black from "./menu_black.svg"
 import close_black from "./close_black.png"
 
-import profile from "./selfie.png"
-
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
 import figma from "./tech/figma.png";
@@ -53,5 +51,4 @@ export {
   aspentech,
   drone_sim,
   swish,
-  profile
 };

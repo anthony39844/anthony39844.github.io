@@ -4,7 +4,6 @@ import { fadeIn, textVariant } from '../utils/motion'
 import { SectionWrapper } from '../hoc'
 import { useContext} from 'react'
 import DarkModeContext from '../hoc/DarkModeContext'
-import { profile } from "../assets"
 
 const About = () => {
   const { darkMode } = useContext(DarkModeContext);
@@ -28,7 +27,7 @@ const About = () => {
           <button
             className="text-[17 px] px-1"
             onClick={() => {
-              window.open("/Resume (1).pdf", "_blank");
+              window.open("/Resume.pdf", "_blank");
             }}
           >
           <span className="font-bold underline">resume</span>
@@ -37,7 +36,7 @@ const About = () => {
         </motion.p>
       </div>
       <div className="mt-10 md:ml-10 flex justify-center items-center">
-        <img className="w-40 h-40 md:w-48 md:h-48 lg:w-64 lg:h-64 rounded-full object-cover border-[3px] border-black" src={profile}></img>
+        <img className="w-40 h-40 md:w-48 md:h-48 lg:w-64 lg:h-64 rounded-full object-cover border-[3px] border-black" src={"/selfie.png"}></img>
       </div>
     </div>
     </>
