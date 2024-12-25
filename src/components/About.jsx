@@ -4,7 +4,6 @@ import { fadeIn, textVariant } from '../utils/motion'
 import { SectionWrapper } from '../hoc'
 import { useContext} from 'react'
 import DarkModeContext from '../hoc/DarkModeContext'
-import { profile } from "../assets"
 
 const About = () => {
   const { darkMode } = useContext(DarkModeContext);
@@ -37,7 +36,7 @@ const About = () => {
         </motion.p>
       </div>
       <div className="mt-10 md:ml-10 flex justify-center items-center">
-        <img className="w-40 h-40 md:w-48 md:h-48 lg:w-64 lg:h-64 rounded-full object-cover border-[3px] border-black" src={profile}></img>
+        <img className="w-40 h-40 md:w-48 md:h-48 lg:w-64 lg:h-64 rounded-full object-cover border-[3px] border-black" src={"/selfie.png"}></img>
       </div>
     </div>
     </>
