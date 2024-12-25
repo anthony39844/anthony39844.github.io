@@ -27,7 +27,7 @@ const About = () => {
           <button
             className="text-[17 px] px-1"
             onClick={() => {
-              window.open("/Resume (1).pdf", "_blank");
+              window.open("/Resume.pdf", "_blank");
             }}
           >
           <span className="font-bold underline">resume</span>
