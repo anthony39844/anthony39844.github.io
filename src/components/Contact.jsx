@@ -40,7 +40,7 @@ const Contact = () => {
           <FontAwesomeIcon className="text-[25px]" icon={faLinkedin} />
         </button>
       </div>
-      <div className={`${darkMode ? 'text-text' : 'text-text-light'} mt-5 flex`}>
+      <div className={`${darkMode ? 'text-text' : 'text-text-light'} mt-5 flex md:text-[12px] text-[10px]`}>
         Made by Anthony Zheng | 2024 
       </div>
     </div>
