@@ -13,7 +13,7 @@ const About = () => {
     <div className="flex flex-col md:flex-row">
       <div className='md:w-3/4 w-full'>
         <motion.div variants={textVariant()} className='mt-4'>
-          <h2 className={`${darkMode ? 'text-text' : 'text-text-light'} font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]`}>
+          <h2 className={`${darkMode ? 'text-text' : 'text-text-light'} font-black sm:text-[50px] xs:text-[40px] text-[30px]`}>
             Hi! I'm Anthony Zheng!
           </h2>
         </motion.div>

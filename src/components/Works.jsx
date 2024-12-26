@@ -83,7 +83,7 @@ const Works = () => {
       whileInView="show" 
       viewport={{ once: true, amount: "some"}}
     >
-      <h2 className={`${darkMode ? 'text-text' : 'text-text-light'} font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]`}>
+      <h2 className={`${darkMode ? 'text-text' : 'text-text-light'} font-black sm:text-[50px] xs:text-[40px] text-[30px]`}>
         Projects
       </h2>
     </motion.div>
