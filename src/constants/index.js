@@ -112,7 +112,7 @@ import {
       date: "June 2024 - August 2024",
       points: [
         "I implemented a tree map component into Voyager by using DevExtreme and manipulated JSON data from AspenTechs proprietary DBMS and REST APIs to be able to be displayed on the tree map.",
-        "I also helped complete SWR tickets with bugs related from the front to the back end."
+        "I also helped complete SWR tickets regarding bugs related to the front and back end."
       ],
     },
   ];
@@ -121,9 +121,7 @@ import {
     {
       name: "Drone Delivery Simulator",
       description: [
-        "Developed a drone delivery simulation that delivers packages using different search algorithms such as A*,  BFS, DFS and Dijkstras.",
-        "Implemented a new feature that allows packages to be stolen while adhering to SOLID principles and utilizing design patterns such as the factory and observer method.",
-        "Used Jira to assign tasks and organize work in a modified SCRUM environment."
+        "A simulation of the UMN campus where drones deliver packages and have realistic interactions such as stolen packages and drone battery depletion."
       ],
       tags: [
         {
@@ -145,10 +143,7 @@ import {
     {
       name: "Expense Tracker",
       description: [
-        "Developed a full stack web application to streamline the organization and display of bank transaction data.",
-        "Built an API to manage and edit persistent data with MongoDB.",
-        "Implemented back-end logic using Python to read CSV files.",
-        "Designed an interactive and user-friendly UI using React.",
+        "A project that I built to help keep track of my unreasonable spending. Allows users to create an account and log in to view and log their expenses."
       ],
       tags: [
         {
@@ -163,6 +158,10 @@ import {
           name: "python",
           color: "pink-text-gradient",
         },
+        {
+          name: "git",
+          color: "blue-text-gradient",
+        },
       ],
       image: expensetracker,
       source_code_link: "https://github.com/anthony39844/ExpenseTracker",
@@ -170,8 +169,7 @@ import {
     {
       name: "Path Search Visualizer",
       description: [
-        "Visualizes how different search algorithms work on a grid with a start and end point.", 
-        "Implemented feature allowing users to add barriers to create complex paths or mazes that will be searched.",
+        "A visualization of A*, Dijkstra's, BFS and DFS searches on customizable maps. A way to learn how these algorithms work and search through a map."
       ],
       tags: [
         {
@@ -189,13 +187,12 @@ import {
       ],
       image: algorithm_visual,
       source_code_link: "https://github.com/Jasonchen272/Path-Search-Visualizer",
+      website_link: "https://path-search-visualizer-jasonchen272s-projects.vercel.app/"
     },
     {
       name: "Sudoku",
       description: [
-        "Used HTML, CSS, and JS to create a dynamic sudoku puzzle interface that can be solved.",
-        "Integrated a backtracking algorithm to generate random Sudoku puzzles as well as solve them.",
-        "Includes multiple levels of difficulty along with answer-checking, allowing players to check their finished puzzle."
+        "Just a fun little Sudoku game with 4 different levels of difficulty. Can check your answers and solve the puzzle for you as well! "
       ],
       tags: [
         {
@@ -210,6 +207,10 @@ import {
           name: "javascript",
           color: "pink-text-gradient",
         },
+        {
+          name: "git",
+          color: "blue-text-gradient",
+        },
       ],
       image: sudoku,
       source_code_link: "https://github.com/anthony39844/Sudoku",
@@ -217,17 +218,13 @@ import {
     {
       name: "Simple Working Implementation Shell",
       description: [
-        "Developed a simple shell in C that simulates command-line interface functionality, supporting user input, process control, and command execution.",
-        "Implemented support for file redirection, foreground and background processes and signal handling."
+        "A simple shell that is able to take in basic command line instructions. Was a bit of a learning curve but a very good introduction into OS and the complexities of lower level programming."
+
       ],
       tags: [
         {
           name: "c",
           color: "blue-text-gradient",
-        },
-        {
-          name: "git",
-          color: "green-text-gradient",
         }
       ],
       image: swish,

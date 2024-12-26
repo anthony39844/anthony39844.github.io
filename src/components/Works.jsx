@@ -5,8 +5,10 @@ import { SectionWrapper } from '/src/hoc'
 import { fadeIn, textVariant } from '/src/utils/motion'
 import { useContext } from "react"
 import DarkModeContext from '/src/hoc/DarkModeContext';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLink } from '@fortawesome/free-solid-svg-icons';
 
-const ProjectCard = ({index, name, description, tags, image, source_code_link}) => {
+const ProjectCard = ({index, name, description, tags, image, source_code_link, website_link}) => {
   const { darkMode } = useContext(DarkModeContext);
   return (
     <motion.div 
@@ -23,14 +25,23 @@ const ProjectCard = ({index, name, description, tags, image, source_code_link}) 
           className="w-full h-full object-cover rounded-2xl"/>
         <div className="absolute inset-0 flex justify-end m-3">
         {source_code_link !== undefined && (
-          <div 
-            onClick={() => window.open(source_code_link, "_blank")}
-            className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer">
-              <img 
-                src={github}
-                alt="github"
-                className="w-1/2 h-1/2 object-contain"
-              />
+          <div className='flex justify-center'>
+            <div 
+              onClick={() => window.open(source_code_link, "_blank")}
+              className="black-gradient w-10 h-10 mr-2 rounded-full flex justify-center items-center cursor-pointer">
+                <img 
+                  src={github}
+                  alt="github"
+                  className="w-1/2 h-1/2 object-contain"
+                />
+            </div>
+            {website_link && (
+              <div 
+                onClick={() => window.open(website_link, "_blank")}
+                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer">
+                  <FontAwesomeIcon icon={faLink}/>
+              </div>
+            )}
           </div>
         )}
         </div>
