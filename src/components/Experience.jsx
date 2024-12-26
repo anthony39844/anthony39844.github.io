@@ -52,7 +52,7 @@ const Experience = () => {
     <motion.div
       variants={textVariant()}
     >
-      <h2 className={`${darkMode ? 'text-text' : 'text-text-light'} font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]`}>
+      <h2 className={`${darkMode ? 'text-text' : 'text-text-light'} font-black sm:text-[50px] xs:text-[40px] text-[30px]`}>
         Work
       </h2>
     </motion.div>
