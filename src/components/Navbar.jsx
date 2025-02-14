@@ -1,7 +1,7 @@
 import { useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMoon } from '@fortawesome/free-solid-svg-icons';
+import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import {styles} from '/src/styles'
 import { navLinks } from '/src/constants'
 import {menu, close, menu_black, close_black} from '/src/assets'
@@ -22,14 +22,16 @@ const Navbar = () => {
           onClick={() => {
             window.scrollTo(0, 0);
         }}>
-          <p className={`${darkMode ? 'text-text' : 'text-text-light'} text-[18px] font-bold cursor-point`}>Anthony Zheng</p>
+          <p className={`${darkMode ? 'text-text' : 'text-text-light'} text-[20px] font-bold cursor-pointer transform transition-transform duration-200 hover:scale-110`}>
+            Anthony Zheng
+          </p>
         </Link>
         <ul className='list-none hidden sm:flex flex-row gap-10'>
           {navLinks.map((link) => (
             <li 
               key={link.id} 
               className={`${darkMode ? 'text-text' : 'text-text-light'}
-              text-[18px] font-medium cursor-pointer`}
+              text-[18px] font-medium cursor-pointer transform transition-transform duration-200 hover:scale-120 hover:underline`}
               onClick={() => {
                 if (link.link !== undefined) {
                   window.open(link.link, "_blank");
@@ -42,11 +44,13 @@ const Navbar = () => {
             </li>
           ))}
           <li 
-            className={`${darkMode ? 'text-text' : 'text-text-light'}`}
+            className={`${darkMode ? 'text-text' : 'text-text-light'} cursor-pointer transform transition-transform duration-200 hover:scale-120`}
             onClick={() => toggleDarkMode(darkMode)}>
-            <FontAwesomeIcon icon={faMoon} size="lg" />
+            <FontAwesomeIcon icon={darkMode ? faMoon: faSun} size="lg" />
           </li>
         </ul>
+
+        {/* smaller screen sizes */}
         <div className='sm:hidden flex flex-1 justify-end items-center'>
           <img 
             src={toggle ? (darkMode ? close : close_black) : (darkMode ? menu : menu_black)} 
@@ -75,9 +79,9 @@ const Navbar = () => {
                 </li>
               ))}
               <li 
-                className={`${darkMode ? 'text-text' : 'text-text-light'}`}
+                className={`${darkMode ? 'text-text' : 'text-text-light'} cursor-pointer`}
                 onClick={() => toggleDarkMode(darkMode)}>
-                <FontAwesomeIcon icon={faMoon} size="lg" />
+                <FontAwesomeIcon icon={darkMode ? faMoon : faSun} size="lg" />
               </li>
             </ul>
           </div>

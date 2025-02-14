@@ -18,7 +18,8 @@ import {
     algorithm_visual,
     drone_sim,
     sudoku,
-    swish
+    swish,
+    lol
   } from "../assets";
   
   export const navLinks = [
@@ -118,6 +119,28 @@ import {
   ];
   
   const projects = [
+    {
+      name: "League of Legends Data Tracker",
+      description: [
+        "A website that displays data and match performances about summoners from a game that I enjoy playing."
+      ],
+      tags: [
+        {
+          name: "angular",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "tailwind",
+          color: "green-text-gradient",
+        },
+        {
+          name: "python",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: lol,
+      source_code_link: "https://github.com/anthony39844/GSB",
+    },
     {
       name: "Drone Delivery Simulator",
       description: [

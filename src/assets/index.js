@@ -25,6 +25,7 @@ import algorithm_visual from "./algorithm_visual.png"
 import drone_sim from "./drone_sim.png"
 import sudoku from "./sudoku.png"
 import swish from "./swish.png"
+import lol from "./LOL_tracker.jpeg"
 
 export {
   expensetracker,
@@ -51,4 +52,5 @@ export {
   aspentech,
   drone_sim,
   swish,
+  lol,
 };
