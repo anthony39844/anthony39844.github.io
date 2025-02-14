@@ -1,4 +1,4 @@
-import {useState, useRef, useContext} from 'react'
+import {useContext} from 'react'
 import { SectionWrapper } from '/src/hoc'
 import DarkModeContext from '/src/hoc/DarkModeContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

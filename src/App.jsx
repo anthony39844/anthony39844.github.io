@@ -1,5 +1,5 @@
 import { BrowserRouter } from "react-router-dom"
-import {About, Contact, Experience, Navbar, Tech, Works } from '/src/components';
+import {About, Contact, Experience, Navbar, Works } from '/src/components';
 import { useContext } from "react";
 import DarkModeContext from '/src/hoc/DarkModeContext';
 

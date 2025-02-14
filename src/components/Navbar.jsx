@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import { useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon } from '@fortawesome/free-solid-svg-icons';
@@ -20,7 +20,6 @@ const Navbar = () => {
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
         <Link to="/" className='flex items-center gap-2' 
           onClick={() => {
-            setActive("");
             window.scrollTo(0, 0);
         }}>
           <p className={`${darkMode ? 'text-text' : 'text-text-light'} text-[18px] font-bold cursor-point`}>Anthony Zheng</p>
