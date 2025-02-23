@@ -15,6 +15,7 @@ module.exports = {
         "text-light": "#2f2f2f",
       },
       screens: {
+        xxs: "300px",
         xs: "450px",
         sm: '640px',
         md:	"768px",

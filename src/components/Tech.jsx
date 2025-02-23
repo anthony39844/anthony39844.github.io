@@ -17,10 +17,10 @@ const TechIcon = ({name, icon, index}) => {
       className='flex flex-col justify-center items-center mb-5'>
       <div 
         className={`${darkMode ? 'bg-secondary' : 'bg-secondary-light'} 
-          p-4 w-24 h-24 shadow-custom rounded-full flex justify-center items-center `}>
-        <img className='w-16 h-16' src={icon}></img>
+          p-2 sm:w-24 sm:h-24 w-18 h-18 shadow-custom rounded-full flex justify-center items-center `}>
+        <img className='sm:w-16 sm:h-16 w-10 h-10 ' src={icon}></img>
       </div>
-      <p className={`${darkMode ? 'text-text' : 'text-text-light'} font-black text-[16px] mt-5`}>{name}</p>
+      <p className={`${darkMode ? 'text-text' : 'text-text-light'} font-black md:text-[16px] text-[12px] mt-5`}>{name}</p>
     </motion.div>
     </>
   )
@@ -29,7 +29,7 @@ const TechIcon = ({name, icon, index}) => {
 const Tech = () => {
   return (
     <>
-      <div className='grid xs:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 p-4 place-items-center'>
+      <div className='grid xxs:grid-cols-2 xs:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 p-4 place-items-center'>
         {technologies.map((tech, i) => {
           return (
             <TechIcon key={`tech-${i}`} name={tech.name} icon={tech.icon} index={i}></TechIcon>
