@@ -1,7 +1,7 @@
 import { useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
+import { faM, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import {styles} from '/src/styles'
 import { navLinks } from '/src/constants'
 import {menu, close, menu_black, close_black} from '/src/assets'
@@ -31,7 +31,7 @@ const Navbar = () => {
             <li 
               key={link.id} 
               className={`${darkMode ? 'text-text' : 'text-text-light'}
-              text-[18px] font-medium cursor-pointer transform transition-transform duration-200 hover:scale-120 hover:underline`}
+              text-[18px] font-medium cursor-pointer transform transition-transform duration-200 hover:scale-110 hover:underline`}
               onClick={() => {
                 if (link.link !== undefined) {
                   window.open(link.link, "_blank");
@@ -46,7 +46,7 @@ const Navbar = () => {
           <li 
             className={`${darkMode ? 'text-text' : 'text-text-light'} cursor-pointer transform transition-transform duration-200 hover:scale-120`}
             onClick={() => toggleDarkMode(darkMode)}>
-            <FontAwesomeIcon icon={darkMode ? faMoon: faSun} size="lg" />
+            <FontAwesomeIcon icon={darkMode ? faSun: faMoon} size="lg" />
           </li>
         </ul>
 
@@ -81,7 +81,7 @@ const Navbar = () => {
               <li 
                 className={`${darkMode ? 'text-text' : 'text-text-light'} cursor-pointer`}
                 onClick={() => toggleDarkMode(darkMode)}>
-                <FontAwesomeIcon icon={darkMode ? faMoon : faSun} size="lg" />
+                <FontAwesomeIcon icon={darkMode ? faSun : faMoon} size="lg" />
               </li>
             </ul>
           </div>

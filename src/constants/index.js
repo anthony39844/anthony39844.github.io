@@ -6,19 +6,16 @@ import {
     html,
     css,
     reactjs,
-    redux,
     tailwind,
     nodejs,
     mongodb,
     git,
-    figma,
     docker,
-    threejs,
     expensetracker,
     algorithm_visual,
     drone_sim,
     sudoku,
-    swish,
+    tcp,
     lol
   } from "../assets";
   
@@ -71,10 +68,6 @@ import {
       icon: reactjs,
     },
     {
-      name: "Redux Toolkit",
-      icon: redux,
-    },
-    {
       name: "Tailwind CSS",
       icon: tailwind,
     },
@@ -87,20 +80,8 @@ import {
       icon: mongodb,
     },
     {
-      name: "Three JS",
-      icon: threejs,
-    },
-    {
-      name: "git",
+      name: "Git",
       icon: git,
-    },
-    {
-      name: "figma",
-      icon: figma,
-    },
-    {
-      name: "docker",
-      icon: docker,
     },
   ];
   
@@ -112,8 +93,8 @@ import {
       iconBg: "#383E56",
       date: "June 2024 - August 2024",
       points: [
-        "I implemented a tree map component into Voyager by using DevExtreme and manipulated JSON data from AspenTechs proprietary DBMS and REST APIs to be able to be displayed on the tree map.",
-        "I also helped complete SWR tickets regarding bugs related to the front and back end."
+        "I implemented a tree map component into Voyager by using DevExtreme and processed JSON data from AspenTechs proprietary DBMS and REST APIs to be able to be displayed on the tree map.",
+        "I also helped complete SWR tickets regarding bugs from front and back end."
       ],
     },
   ];
@@ -239,10 +220,9 @@ import {
       source_code_link: "https://github.com/anthony39844/Sudoku",
     },
     {
-      name: "Simple Working Implementation Shell",
+      name: "Multi-Threaded TCP Server",
       description: [
-        "A simple shell that is able to take in basic command line instructions. Was a bit of a learning curve but a very good introduction into OS and the complexities of lower level programming."
-
+        "A multi-threaded, TCP based HTTP server. Was a change from the usual type of programming I do, but I learned a lot about OS and networking, as well as the complexities of lower level programming."
       ],
       tags: [
         {
@@ -250,7 +230,7 @@ import {
           color: "blue-text-gradient",
         }
       ],
-      image: swish,
+      image: tcp,
       source_code_link: undefined,
     },
   ];
