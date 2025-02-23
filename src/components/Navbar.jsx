@@ -44,7 +44,7 @@ const Navbar = () => {
             </li>
           ))}
           <li 
-            className={`${darkMode ? 'text-text' : 'text-text-light'} cursor-pointer transform transition-transform duration-200 hover:scale-120`}
+            className={`${darkMode ? 'text-text' : 'text-text-light'} cursor-pointer transform transition-transform duration-200 hover:scale-110`}
             onClick={() => toggleDarkMode(darkMode)}>
             <FontAwesomeIcon icon={darkMode ? faSun: faMoon} size="lg" />
           </li>

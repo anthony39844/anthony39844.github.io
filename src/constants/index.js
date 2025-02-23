@@ -10,7 +10,9 @@ import {
     nodejs,
     mongodb,
     git,
-    docker,
+    python,
+    java,
+    angular,
     expensetracker,
     algorithm_visual,
     drone_sim,
@@ -48,11 +50,11 @@ import {
   
   const technologies = [
     {
-      name: "HTML 5",
+      name: "HTML",
       icon: html,
     },
     {
-      name: "CSS 3",
+      name: "CSS",
       icon: css,
     },
     {
@@ -80,9 +82,21 @@ import {
       icon: mongodb,
     },
     {
-      name: "Git",
+      name: "Github",
       icon: git,
     },
+    {
+      name: "Angular",
+      icon: angular
+    },
+    {
+      name: "Python",
+      icon: python
+    },
+    {
+      name: "Java",
+      icon: java
+    }
   ];
   
   const experiences = [
