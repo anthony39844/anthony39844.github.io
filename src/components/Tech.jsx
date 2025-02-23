@@ -3,7 +3,7 @@ import { useContext} from 'react'
 import { SectionWrapper } from '../hoc'
 import { technologies } from '../constants';
 import { motion } from 'framer-motion'
-import { fadeIn, textVariant } from '../utils/motion'
+import { fadeIn } from '../utils/motion'
 
 const TechIcon = ({name, icon, index}) => {
   const { darkMode } = useContext(DarkModeContext);
@@ -29,13 +29,13 @@ const TechIcon = ({name, icon, index}) => {
 const Tech = () => {
   return (
     <>
-      <motion.div variants={textVariant()} className='grid grid-cols-6 gap-4 p-4 place-items-center'>
+      <div className='grid grid-cols-6 gap-4 p-4 place-items-center'>
         {technologies.map((tech, i) => {
           return (
             <TechIcon key={`tech-${i}`} name={tech.name} icon={tech.icon} index={i}></TechIcon>
           )
         })}
-      </motion.div>
+      </div>
     </>
   )
 }
