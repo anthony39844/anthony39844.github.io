@@ -29,7 +29,7 @@ const TechIcon = ({name, icon, index}) => {
 const Tech = () => {
   return (
     <>
-      <div className='grid grid-cols-6 gap-4 p-4 place-items-center'>
+      <div className='grid xs:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 p-4 place-items-center'>
         {technologies.map((tech, i) => {
           return (
             <TechIcon key={`tech-${i}`} name={tech.name} icon={tech.icon} index={i}></TechIcon>
