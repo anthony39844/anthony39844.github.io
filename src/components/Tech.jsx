@@ -14,13 +14,16 @@ const TechIcon = ({name, icon, index}) => {
       initial="hidden" 
       whileInView="show" 
       viewport={{ once: true, amount: "some" }}
-      className='flex flex-col justify-center items-center mb-5'>
+      className='group relative flex flex-col justify-center items-center mb-5'>
       <div 
         className={`${darkMode ? 'bg-secondary' : 'bg-secondary-light'} 
-          p-2 sm:w-24 sm:h-24 w-18 h-18 shadow-custom rounded-full flex justify-center items-center `}>
+          p-2 sm:w-24 sm:h-24 w-18 h-18 shadow-custom rounded-full flex justify-center items-center 
+          hover:scale-115 transition-transform duration-200 ease-in-out group`}>
         <img className='sm:w-16 sm:h-16 w-10 h-10 ' src={icon}></img>
       </div>
-      <p className={`${darkMode ? 'text-text' : 'text-text-light'} font-black md:text-[16px] text-[12px] mt-5`}>{name}</p>
+      <div className={`${darkMode ? 'text-text' : 'text-text-light'} font-bold md:text-[16px] text-[12px] mt-3 rounded invisible group-hover:visible`}>
+          {name}
+      </div>
     </motion.div>
     </>
   )
