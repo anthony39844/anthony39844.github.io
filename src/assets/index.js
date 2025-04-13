@@ -18,6 +18,7 @@ import java from "./tech/java.png";
 import python from "./tech/python.png";
 
 import aspentech from "./company/aspentech.png"
+import visa from "./company/visa.png"
 
 import expensetracker from "./expensetracker.png"
 import algorithm_visual from "./algorithm_visual.png"
@@ -51,4 +52,5 @@ export {
   drone_sim,
   tcp,
   lol,
+  visa,
 };

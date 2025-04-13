@@ -27,9 +27,11 @@ const ExperienceCard = ({experience}) => {
   >
     <div>
       <h3 className={`${darkMode ? 'text-text' : 'text-text-light'} text-[24px] font-bold`}>
-        {experience.title}
+        {experience.company_name}
       </h3>
-      <p className={`${darkMode ? 'text-text' : 'text-text-light'} text-[16px] font-semibold" style={{margin:0}}`}>{experience.company_name}</p>
+      <h4 className={`${darkMode ? 'text-text' : 'text-text-light'} text-[18px] font-semibold m-0`}>
+        {experience.title} 
+      </h4>
     </div>
     <ul className="mt-5 list-disc ml-5 space-y-2">
       {experience.points.map((point, index) => (

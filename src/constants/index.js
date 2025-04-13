@@ -18,7 +18,8 @@ import {
     drone_sim,
     sudoku,
     tcp,
-    lol
+    lol,
+    visa
   } from "../assets";
   
   export const navLinks = [
@@ -101,7 +102,7 @@ import {
   
   const experiences = [
     {
-      title: "R&D Intern",
+      title: "Software Engineer Intern",
       company_name: "Aspen Tech",
       icon: aspentech,
       iconBg: "#383E56",
@@ -111,6 +112,16 @@ import {
         "I also helped complete SWR tickets regarding bugs from front and back end."
       ],
     },
+    {
+      title: "Software Engineer Intern",
+      company_name: "Visa",
+      icon: visa,
+      iconBg: "#F0F0F0",
+      date: "May 2025 - August 2025",
+      points: [
+        "Incoming Summer 2025"
+      ],
+    }
   ];
   
   const projects = [
