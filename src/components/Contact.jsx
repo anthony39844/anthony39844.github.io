@@ -26,7 +26,7 @@ const Contact = () => {
         <button
           className={`${darkMode ? 'text-text' : 'text-text-light'} px-4 py-2 rounded flex items-center`}
           onClick={() => {
-            window.open("https://github.com/anthony39844/anthony39844.github.io", "_blank")
+            window.open("https://github.com/anthony39844", "_blank")
           }}
         >
           <FontAwesomeIcon className="text-[25px]" icon={faGithub} />
@@ -41,7 +41,7 @@ const Contact = () => {
         </button>
       </div>
       <div className={`${darkMode ? 'text-text' : 'text-text-light'} mt-5 flex md:text-[12px] text-[10px]`}>
-        Made by Anthony Zheng | 2024 
+        Made by Anthony Zheng | 2025 
       </div>
     </div>
   )

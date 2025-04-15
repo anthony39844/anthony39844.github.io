@@ -31,7 +31,7 @@ const Navbar = () => {
             <li 
               key={link.id} 
               className={`${darkMode ? 'text-text' : 'text-text-light'}
-              text-[18px] font-medium cursor-pointer transform transition-transform duration-200 hover:scale-110 hover:underline`}
+              text-[18px] font-medium cursor-pointer transform transition-transform duration-200 hover:scale-115 hover:underline`}
               onClick={() => {
                 if (link.link !== undefined) {
                   window.open(link.link, "_blank");
@@ -44,7 +44,8 @@ const Navbar = () => {
             </li>
           ))}
           <li 
-            className={`${darkMode ? 'text-text' : 'text-text-light'} cursor-pointer transform transition-transform duration-200 hover:scale-110`}
+            className={`${darkMode ? 'text-text' : 'text-text-light'} 
+              w-5 h-6 cursor-pointer transform transition-transform duration-200 hover:scale-115 hover:underline`}
             onClick={() => toggleDarkMode(darkMode)}>
             <FontAwesomeIcon icon={darkMode ? faSun: faMoon} size="lg" />
           </li>

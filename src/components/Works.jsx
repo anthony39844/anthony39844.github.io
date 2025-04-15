@@ -47,16 +47,16 @@ const ProjectCard = ({index, name, description, tags, image, source_code_link, w
 
       <div className="mt-5">
         <h3 className={`${darkMode ? 'text-text' : 'text-text-light'} font-bold text-[24px]`}>{name}</h3>
-        <ul className="mt-5 list-disc ml-5 space-y-2">
+        <div className="mt-5 space-y-2">
         {description.map((desc, index) => (
-          <li 
+          <p
             key={`description-point-${index}`}
-            className={`${darkMode ? 'text-text' : 'text-text-light'} text-[14px] pl-1 tracking-wider`}
+            className={`${darkMode ? 'text-text' : 'text-text-light'} text-[14px] tracking-wider`}
           >
             {desc}
-          </li>
+          </p>
         ))}
-      </ul>
+      </div>
       </div>
       <div className="mt-4 flex flex-wrap gap-2">
         {tags.map((tag) => (
