@@ -1,0 +1,95 @@
+{
+  "personal": {
+    "name": "Anthony Zheng",
+    "role": "Software Engineer",
+    "avatar": "/selfie.png",
+    "socials": {
+      "github": "https://github.com/anthony39844",
+      "linkedin": "https://www.linkedin.com/in/anthony39844/",
+      "email": "ant3984@gmail.com"
+    }
+  },
+  "experience": [
+    {
+      "id": 1,
+      "company": "Aspen Technology, Inc.",
+      "location": "Medina, MN",
+      "logo": "/icons/aspen-tech.svg",
+      "year": "2024",
+      "roles": [
+        {
+          "role": "Software Engineer Intern",
+          "period": "June 2024 — August 2024",
+          "description": [
+            "Implemented a tree map component into Voyager using DevExtreme and processed JSON data from AspenTech's proprietary DBMS and REST APIs to display hierarchical data visualizations.",
+            "Resolved front-end and back-end bug tickets to improve system reliability."
+          ],
+          "tech": [
+            "TypeScript",
+            "HTML",
+            "CSS"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "company": "Visa",
+      "location": "Austin, TX",
+      "logo": "/icons/Visa.svg.webp",
+      "year": "2025",
+      "roles": [
+        {
+          "role": "Software Engineer",
+          "period": "March 2026 — Present",
+          "description": [
+            "Building AI agents"
+          ],
+          "tech": [
+            "Java",
+            "Python"
+          ]
+        },
+        {
+          "role": "Software Engineer Intern",
+          "period": "May 2025 — August 2025",
+          "description": [
+            "Built a agentic commerce POC, connecting Visa APIs via MCP"
+          ],
+          "tech": [
+            "Typescript",
+            "Langchain",
+            "MCP"
+          ]
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "Money Manager",
+      "description": "A full-stack web application for tracking personal finances.",
+      "link": "https://moneymanager-65420710359.us-east4.run.app",
+      "github": "https://github.com/anthony39844/MoneyManager",
+      "tags": [
+        "Next.js",
+        "PostgreSQL (Neon Serverless)",
+        "Docker",
+        "GCP"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "League of Legends Data Tracker (GSB)",
+      "description": "A website that displays data and match performances about summoners from a game that I enjoy playing.",
+      "link": "",
+      "github": "https://github.com/anthony39844/GSB",
+      "tags": [
+        "Angular",
+        "Tailwind",
+        "Python"
+      ]
+    }
+  ]
+}
